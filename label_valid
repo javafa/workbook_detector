@@ -1,0 +1,1 @@
+labelImg ./valid/images ./train/valid/classes.txt

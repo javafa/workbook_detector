@@ -1,22 +1,20 @@
 import fitz
 import os
 
-# 해설 pdf
-answer_dir = "./pdf/answer"
 
 # 문제 pdf
-content_dir = "./pdf/content"
+content_dir = "./pdf/valid"
 content_pdf_list = os.listdir(content_dir)
 
 # 
 matrix = fitz.Matrix(1.0, 1.0)
 
-file_idx = 0
+file_idx = 11
 
 for file in content_pdf_list :
     if file.endswith(".pdf") :
         file_idx += 1
-        file_name = f'{file_idx}'.zfill(3)
+        file_name = f'val_{file_idx}'.zfill(3)
         
         doc = fitz.open(f'{content_dir}/{file}')
         for page in doc:
